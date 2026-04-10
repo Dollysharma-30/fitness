@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator | FitLife</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">FitLife</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bmi.html" class="active">BMI Calculator</a></li>
+                    <li><a href="calories.html">Calorie Calculator</a></li>
+                    <li><a href="plans.html">Fitness Plans</a></li>
+                    <li><a href="exercises.html">Exercises</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+               
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="calculator-page">
+        <section class="calculator-intro">
+            <h1>BMI Calculator</h1>
+            <p>Body Mass Index (BMI) is a measure of body fat based on height and weight. Use our calculator to find out your BMI and what it means for your health.</p>
+        </section>
+
+        <section class="calculator-container">
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="height">Height (cm)</label>
+                    <input type="number" id="height" placeholder="Enter your height in cm">
+                </div>
+                <div class="form-group">
+                    <label for="weight">Weight (kg)</label>
+                    <input type="number" id="weight" placeholder="Enter your weight in kg">
+                </div>
+    
+                <button id="calculate-bmi" class="btn primary">Calculate BMI</button>
+            </div>
+
+            <div class="calculator-result">
+                <div id="bmi-result" class="result-box">
+                    <h3>Your BMI</h3>
+                    <div class="result-value">--</div>
+                    <div class="result-category">Enter your details to calculate</div>
+                </div>
+                <div class="bmi-info">
+                    <h3>BMI Categories:</h3>
+                    <ul>
+                        <li><span class="underweight">Underweight</span>: BMI less than 18.5</li>
+                        <li><span class="normal">Normal weight</span>: BMI 18.5–24.9</li>
+                        <li><span class="overweight">Overweight</span>: BMI 25–29.9</li>
+                        <li><span class="obese">Obese</span>: BMI 30 or greater</li>
+                    </ul>
+                    <p>Note: BMI is a screening tool but not a diagnostic of body fatness or health. Consult a healthcare provider for assessment.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bmi-chart">
+            <h2>BMI Chart</h2>
+            <div class="chart-container">
+                <img src="12.jpg" alt="BMI Chart">
+            </div>
+        </section>
+
+        <section class="health-tips">
+            <h2>Health Recommendations Based on Your BMI</h2>
+            <div class="tips-container">
+                <div class="tip-card" id="underweight-tip">
+                    <h3>Underweight (BMI < 18.5)</h3>
+                    <ul>
+                        <li>Consult with a healthcare provider to rule out any medical conditions</li>
+                        <li>Focus on nutrient-dense foods to gain weight healthily</li>
+                        <li>Consider strength training to build muscle mass</li>
+                        <li>Eat frequent, smaller meals throughout the day</li>
+                    </ul>
+                </div>
+                <div class="tip-card" id="normal-tip">
+                    <h3>Normal Weight (BMI 18.5-24.9)</h3>
+                    <ul>
+                        <li>Maintain your current healthy habits</li>
+                        <li>Continue balanced diet and regular exercise</li>
+                        <li>Monitor your weight periodically</li>
+                        <li>Focus on body composition and fitness goals</li>
+                    </ul>
+                </div>
+                <div class="tip-card" id="overweight-tip">
+                    <h3>Overweight (BMI 25-29.9)</h3>
+                    <ul>
+                        <li>Aim for gradual weight loss (0.5-1kg per week)</li>
+                        <li>Increase physical activity to at least 150 minutes per week</li>
+                        <li>Reduce portion sizes and limit high-calorie foods</li>
+                        <li>Focus on long-term lifestyle changes</li>
+                    </ul>
+                </div>
+                <div class="tip-card" id="obese-tip">
+                    <h3>Obese (BMI ≥ 30)</h3>
+                    <ul>
+                        <li>Consult with a healthcare provider for guidance</li>
+                        <li>Consider a medically supervised weight loss program</li>
+                        <li>Start with moderate physical activity as tolerated</li>
+                        <li>Make sustainable dietary changes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About FitLife</h3>
+                    <p>Your comprehensive fitness companion helping you achieve your health and wellness goals through science-backed tools and personalized plans.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="bmi.html">BMI Calculator</a></li>
+                        <li><a href="calories.html">Calorie Calculator</a></li>
+                        <li><a href="plans.html">Fitness Plans</a></li>
+                        <li><a href="exercises.html">Exercises</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> info@fitlife.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 FitLife. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="bmi.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

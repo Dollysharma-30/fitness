@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Plans | FitLife</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+       <style>
+
+    
+    /* Modal images */
+    .modal-image-container {
+        width: 100%;
+        max-height: 300px;
+        overflow: hidden;
+    }
+    .modal-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+        /* Internal CSS for plan image sizing */
+        .plan-card:nth-child(1) img,
+        .plan-card:nth-child(5) img,
+        .plan-card:nth-child(6) img {
+            width: 100%;
+            height: 200px; /* Fixed height for consistency */
+            object-fit: cover; /* Ensures images maintain aspect ratio */
+            object-position: center; /* Centers the image in the frame */
+        }
+        
+        /* Optional: Add hover effect for better UX */
+        .plan-card img {
+            transition: transform 0.3s ease;
+        }
+        
+        .plan-card:hover img {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">FitLife</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bmi.html">BMI Calculator</a></li>
+                    <li><a href="calories.html">Calorie Calculator</a></li>
+                    <li><a href="plans.html" class="active">Fitness Plans</a></li>
+                    <li><a href="exercises.html">Exercises</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" id="global-search" placeholder="Search plans...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main class="plans-page">
+        <section class="page-header">
+            <h1>Fitness Plans</h1>
+            <p>Choose from our expert-designed fitness plans tailored to different goals and fitness levels. Each plan includes workout routines, nutrition guidance, and progress tracking.</p>
+        </section>
+
+        <section class="plans-filter">
+            <div class="filter-options">
+                <div class="filter-group">
+                    <label for="goal-filter">Goal</label>
+                    <select id="goal-filter">
+                        <option value="all">All Goals</option>
+                        <option value="weight-loss">Weight Loss</option>
+                        <option value="muscle-gain">Muscle Gain</option>
+                        <option value="toning">Toning</option>
+                        <option value="strength">Strength</option>
+                        <option value="endurance">Endurance</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="level-filter">Level</label>
+                    <select id="level-filter">
+                        <option value="all">All Levels</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="duration-filter">Duration</label>
+                    <select id="duration-filter">
+                        <option value="all">All Durations</option>
+                        <option value="4">4 Weeks</option>
+                        <option value="8">8 Weeks</option>
+                        <option value="12">12 Weeks</option>
+                    </select>
+                </div>
+                <button id="apply-filters" class="btn small">Apply Filters</button>
+                <button id="reset-filters" class="btn small outline">Reset</button>
+            </div>
+        </section>
+
+        <section class="plans-container">
+            <div class="plans-grid">
+                <!-- Plan 1 -->
+                <div class="plan-card" data-goal="weight-loss" data-level="beginner" data-duration="8">
+                    <img src="06.jpg" alt="Beginner Weight Loss">
+                    <div class="plan-badge beginner">Beginner</div>
+                    <div class="plan-content">
+                        <h3>8-Week Beginner Weight Loss</h3>
+                        <div class="plan-meta">
+                            <span><i class="fas fa-bullseye"></i> Weight Loss</span>
+                            <span><i class="fas fa-clock"></i> 8 Weeks</span>
+                            <span><i class="fas fa-dumbbell"></i> 3-4x/week</span>
+                        </div>
+                        <p>A gentle introduction to fitness combining cardio and strength training for sustainable weight loss.</p>
+                        <div class="plan-price">$49.99</div>
+                        <a href="#beginner-weight-loss" class="btn small view-details">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Plan 2 -->
+                <div class="plan-card" data-goal="muscle-gain" data-level="intermediate" data-duration="12">
+                    <img src="07.jpg" alt="Muscle Building">
+                    <div class="plan-badge intermediate">Intermediate</div>
+                    <div class="plan-content">
+                        <h3>12-Week Muscle Building</h3>
+                        <div class="plan-meta">
+                            <span><i class="fas fa-bullseye"></i> Muscle Gain</span>
+                            <span><i class="fas fa-clock"></i> 12 Weeks</span>
+                            <span><i class="fas fa-dumbbell"></i> 4-5x/week</span>
+                        </div>
+                        <p>Progressive overload program designed to maximize muscle growth with proper nutrition guidance.</p>
+                        <div class="plan-price">$79.99</div>
+                        <a href="#muscle-building" class="btn small view-details">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="plan-card" data-goal="toning" data-level="beginner" data-duration="4">
+                    <img src="08.jpg" alt="Body Toning">
+                    <div class="plan-badge beginner">Beginner</div>
+                    <div class="plan-content">
+                        <h3>4-Week Body Toning</h3>
+                        <div class="plan-meta">
+                            <span><i class="fas fa-bullseye"></i> Toning</span>
+                            <span><i class="fas fa-clock"></i> 4 Weeks</span>
+                            <span><i class="fas fa-dumbbell"></i> 3x/week</span>
+                        </div>
+                        <p>Short program focusing on sculpting and defining muscles without bulking.</p>
+                        <div class="plan-price">$29.99</div>
+                        <a href="#body-toning" class="btn small view-details">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Plan 4 -->
+                <div class="plan-card" data-goal="strength" data-level="advanced" data-duration="12">
+                    <img src="09.jpg" alt="Strength Program">
+                    <div class="plan-badge advanced">Advanced</div>
+                    <div class="plan-content">
+                        <h3>12-Week Strength Program</h3>
+                        <div class="plan-meta">
+                            <span><i class="fas fa-bullseye"></i> Strength</span>
+                            <span><i class="fas fa-clock"></i> 12 Weeks</span>
+                            <span><i class="fas fa-dumbbell"></i> 4x/week</span>
+                        </div>
+                        <p>For experienced lifters looking to increase their maximal strength on major lifts.</p>
+                        <div class="plan-price">$89.99</div>
+                        <a href="#strength-program" class="btn small view-details">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Plan 5 -->
+                <div class="plan-card" data-goal="weight-loss" data-level="intermediate" data-duration="8">
+                    <img src="10.jpg" alt="Intense Weight Loss">
+                    <div class="plan-badge intermediate">Intermediate</div>
+                    <div class="plan-content">
+                        <h3>8-Week Intense Weight Loss</h3>
+                        <div class="plan-meta">
+                            <span><i class="fas fa-bullseye"></i> Weight Loss</span>
+                            <span><i class="fas fa-clock"></i> 8 Weeks</span>
+                            <span><i class="fas fa-dumbbell"></i> 5x/week</span>
+                        </div>
+                        <p>High-intensity program combining metabolic conditioning with strength training for rapid fat loss.</p>
+                        <div class="plan-price">$59.99</div>
+                        <a href="#intense-weight-loss" class="btn small view-details">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Plan 6 -->
+                <div class="plan-card" data-goal="endurance" data-level="intermediate" data-duration="12">
+                    <img src="11.jpg" alt="Endurance Training">
+                    <div class="plan-badge intermediate">Intermediate</div>
+                    <div class="plan-content">
+                        <h3>12-Week Endurance Builder</h3>
+                        <div class="plan-meta">
+                            <span><i class="fas fa-bullseye"></i> Endurance</span>
+                            <span><i class="fas fa-clock"></i> 12 Weeks</span>
+                            <span><i class="fas fa-dumbbell"></i> 5-6x/week</span>
+                        </div>
+                        <p>Improve your cardiovascular fitness and muscular endurance with this progressive program.</p>
+                        <div class="plan-price">$69.99</div>
+                        <a href="#endurance-builder" class="btn small view-details">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plan Details Modal -->
+        <div id="plan-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modal-content">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <section class="plan-benefits">
+            <h2>What's Included in Our Plans</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Custom Workouts</h3>
+                    <p>Detailed workout routines with exercise demonstrations, sets, reps, and rest periods.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Nutrition Guide</h3>
+                    <p>Meal plans and nutritional guidelines tailored to your specific fitness goals.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Progress Tracking</h3>
+                    <p>Tools to track your workouts, measurements, and overall progress.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-video"></i>
+                    <h3>Video Demonstrations</h3>
+                    <p>Access to exercise video library with proper form demonstrations.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>Expert Support</h3>
+                    <p>Email access to certified trainers for program-related questions.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Access</h3>
+                    <p>All plans accessible on any device - phone, tablet, or computer.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About FitLife</h3>
+                    <p>Your comprehensive fitness companion helping you achieve your health and wellness goals through science-backed tools and personalized plans.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="bmi.html">BMI Calculator</a></li>
+                        <li><a href="calories.html">Calorie Calculator</a></li>
+                        <li><a href="plans.html">Fitness Plans</a></li>
+                        <li><a href="exercises.html">Exercises</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> info@fitlife.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 FitLife. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="plans.js"></script>
+</body>
+</html>
