@@ -27,6 +27,6 @@ JavaScript for interactive functionality (BMI and Calorie calculators).
 
 Responsive Design
 
-The website is fully responsive and optimized for desktop, tablet, and mobile devices, ensuring a smooth user experience
+The website is fully responsive and optimized for desktop, tablet, and mobile devices, ensuring a smooth user 
 
-across all screen sizes.
+experience across all screen sizes.
