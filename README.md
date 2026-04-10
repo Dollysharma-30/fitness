@@ -1,4 +1,5 @@
 Fitness:- Schedule of Fitness
+
 A responsive fitness-themed website designed to provide users with tools and resources to maintain a healthy lifestyle. This website includes interactive features like a BMI calculator, calorie calculator, fitness exercises, and a contact page.
 
 Features
